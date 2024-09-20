@@ -1,0 +1,43 @@
+Titles;ArrayFactors
+TIME;1
+U batt.A [V];0.02441
+I batt. A [A];0.001221
+U batt.B [V];0.02441
+I batt. B [A];0.001221
+Set. H [V];0.003662
+Meas. H [V];0.001221
+I purifier [A];0.001221
+I dissociator [A];0.001221
+H light [V];0.001221
+IT heater [V];0.004883
+IB heater [V];0.004883
+IS heater [V];0.004883
+UTC heater [V];0.004883
+ES heater [V];0.004883
+EB heater [V];0.004883
+I heater [V];0.004883
+T heater [V];0.004883
+Boxes temp. [C];0.02441
+I Boxes [A];0.001221
+Amb. Temp. [C];0.01221
+C field [V];0
+U varactor [V];0.002441
+U HT ext. [Kv];0.001221
+I HT ext. [uA];0.1221
+U HT int. [kV];0.001221
+I HT int. [uA];0.1221
+Sto. press. [bar];0.004883
+Sto. heater [V];0.006104
+Pir. heater [V];0.006104
+UOCXO 100 MHz [V];0.002441
+U 405 kHz [V];0.003662
+U ocxo [V];0.002441
++24Vdc [V];0.09766
++15Vdc [V];0.07813
+-15Vdc [V];-0.07813
++5Vdc [V];0.03906
+-5Vdc [V];0
++8Vdc [V];0.03906
++18Vdc [V];0.07813
+LOCK 100 MHz status;0.03906
+Lock status;1

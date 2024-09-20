@@ -1,0 +1,39 @@
+############
+# CRONTABS #
+############
+# i accidentally deleted the user crontabs by hitting r instead of e
+# fuck that
+# so from now on, let's load in this file into the user crontabs
+
+##########
+# Tester #
+##########
+# echo something to log each minute
+#* * * * * echo "home is ${HOME}" >> $HOME/esl/logs/tmp.log 2>&1
+########################
+# Sync Data to NyMitra #
+########################
+# the zeroth minute of each hour, every day, month, year (once an hour)
+0 * * * * bash $HOME/esl/scripts/sync-tic-log-2-ny-mitra.sh >> $HOME/esl/logs/tmp.log 2>&1
+###############################
+# Get NR & T4 State of Health #
+###############################
+# twice a day @ 6 am & 6 pm
+0 6,18 * * * python3 $HOME/esl/DataDump/MaserDataDumpNR.py >> $HOME/esl/logs/tmp.log 2>&1
+0 6,18 * * * bash $HOME/esl/scripts/get-t4-data-runner.sh >> $HOME/esl/logs/tmp.log 2>&1
+##################################
+# Clean up MaserData Directories #
+##################################
+# once @ 3 am
+0 3 * * * bash $HOME/esl/scripts/sort-maserdata.sh  >> $HOME/esl/logs/tmp.log 2>&1
+
+
+
+#############
+# NOTE/TODO #
+#############
+# 
+# the current directory structures are temporary, & must be fixed up once out of testing stage
+# the logging should be done properly, or at least save to seperate relevantly-named files in $HOME/Auto/logs/ (or better yet tmp)
+# also I read somewhere about crons sensitivty to newlines at the end of this file...
+#
